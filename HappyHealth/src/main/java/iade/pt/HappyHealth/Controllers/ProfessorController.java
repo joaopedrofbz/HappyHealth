@@ -16,10 +16,10 @@ import iade.pt.HappyHealth.Models.Repository.ProfessorRepositorio;
     public class ProfessorController {
     private Logger logger = LoggerFactory.getLogger(ProfessorController.class);
     @Autowired
-    private ProfessorRepositorio ProfessorRepositorio;
+    private ProfessorRepositorio professorRepositorio;
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Professor> getProfessor() {
         logger.info("Enviando todas os professores");
-        return ProfessorRepositorio.findAll();
+        return professorRepositorio.findAll();
     }
 }

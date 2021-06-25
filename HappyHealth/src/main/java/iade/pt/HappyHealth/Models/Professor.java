@@ -13,8 +13,8 @@ public class Professor {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
     @Column (name ="prof_id") private int id;
-    @Column (name ="prof_NomeProp") private int Nome;
-    @Column (name ="prof_Apelido") private int Tempo;
+    @Column (name ="prof_NomeProp") private String Nome;
+    @Column (name ="prof_Apelido") private String Tempo;
     @Column (name ="prof_genero") private char genero;
     @Column (name ="prof_datanasc") private LocalDate datanascimento;
     @Column (name ="prof_nif") private int nif;
@@ -29,19 +29,19 @@ public class Professor {
         this.id = id;
     }
 
-    public int getNome() {
+    public String getNome() {
         return Nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         Nome = nome;
     }
 
-    public int getTempo() {
+    public String getTempo() {
         return Tempo;
     }
 
-    public void setTempo(int tempo) {
+    public void setTempo(String tempo) {
         Tempo = tempo;
     }
 

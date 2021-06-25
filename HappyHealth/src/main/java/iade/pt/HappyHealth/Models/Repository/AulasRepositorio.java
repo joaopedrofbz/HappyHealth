@@ -6,5 +6,6 @@ import iade.pt.HappyHealth.Models.Aula;
 
 public interface AulasRepositorio extends CrudRepository<Aula,Integer>{
 
+   
 
 }

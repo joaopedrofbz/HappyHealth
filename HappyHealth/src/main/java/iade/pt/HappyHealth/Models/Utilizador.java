@@ -16,8 +16,8 @@ public class Utilizador {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
     @Column (name ="UT_id") private int id;
-    @Column (name ="UT_NProprio") private int Nome;
-    @Column (name ="UT_Apelido") private int Tempo;
+    @Column (name ="UT_NProprio") private String Nome;
+    @Column (name ="UT_Apelido") private String Apelido;
     @Column (name ="UT_datanasc") private LocalDate datanascimento;
     @Column (name ="UT_genero") private char genero;
     @Column (name ="UT_nif") private int nif;
@@ -33,20 +33,20 @@ public class Utilizador {
         this.id = id;
     }
 
-    public int getNome() {
+    public String getNome() {
         return Nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         Nome = nome;
     }
 
-    public int getTempo() {
-        return Tempo;
+    public String getApelido() {
+        return Apelido;
     }
 
-    public void setTempo(int tempo) {
-        Tempo = tempo;
+    public void setApelido(String apelido) {
+        Apelido = apelido;
     }
 
     public LocalDate getDatanascimento() {
