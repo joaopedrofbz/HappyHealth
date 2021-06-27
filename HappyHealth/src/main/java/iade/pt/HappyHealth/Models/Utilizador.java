@@ -2,7 +2,8 @@ package iade.pt.HappyHealth.Models;
 
 
 
-import java.time.LocalDate; 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,73 +16,58 @@ import javax.persistence.Table;
 public class Utilizador {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
-    @Column (name ="UT_id") private int id;
-    @Column (name ="UT_NProprio") private String Nome;
-    @Column (name ="UT_Apelido") private String Apelido;
-    @Column (name ="UT_datanasc") private LocalDate datanascimento;
-    @Column (name ="UT_genero") private char genero;
-    @Column (name ="UT_nif") private int nif;
-    @Column (name="UT_TotalPontos") private int TotalPontos;
+    @Column (name ="UT_id") private int UTid;
+    @Column (name ="UT_NProprio") private String UTNome;
+    @Column (name ="UT_Apelido") private String UTApelido;
+    @Column (name ="UT_Datanasc") private LocalDate UTdatanascimento;
+    @Column (name ="UT_Genero") private String UTgenero;
+    @Column (name ="UT_nif") private int UTnif;
+    @Column (name="UT_TotalPontos") private int UTTotalPontos;
     
+
     public Utilizador(){}
-
-    public int getId() {
-        return id;
+    
+    public int getUTid() {
+        return UTid;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setUTid(int uTid) {
+        UTid = uTid;
     }
-
-    public String getNome() {
-        return Nome;
+    public String getUTNome() {
+        return UTNome;
     }
-
-    public void setNome(String nome) {
-        Nome = nome;
+    public void setUTNome(String uTNome) {
+        UTNome = uTNome;
     }
-
-    public String getApelido() {
-        return Apelido;
+    public String getUTApelido() {
+        return UTApelido;
     }
-
-    public void setApelido(String apelido) {
-        Apelido = apelido;
+    public void setUTApelido(String uTApelido) {
+        UTApelido = uTApelido;
     }
-
-    public LocalDate getDatanascimento() {
-        return datanascimento;
+    public LocalDate getUTdatanascimento() {
+        return UTdatanascimento;
     }
-
-    public void setDatanascimento(LocalDate datanascimento) {
-        this.datanascimento = datanascimento;
+    public void setUTdatanascimento(LocalDate uTdatanascimento) {
+        UTdatanascimento = uTdatanascimento;
     }
-
-    public char getGenero() {
-        return genero;
+    public String getUTgenero() {
+        return UTgenero;
     }
-
-    public void setGenero(char genero) {
-        this.genero = genero;
+    public void setUTgenero(String uTgenero) {
+        UTgenero = uTgenero;
     }
-
-    public int getNif() {
-        return nif;
+    public int getUTnif() {
+        return UTnif;
     }
-
-    public void setNif(int nif) {
-        this.nif = nif;
+    public void setUTnif(int uTnif) {
+        UTnif = uTnif;
     }
-
-    public int getTotalPontos() {
-        return TotalPontos;
+    public int getUTTotalPontos() {
+        return UTTotalPontos;
     }
-
-    public void setTotalPontos(int totalPontos) {
-        TotalPontos = totalPontos;
+    public void setUTTotalPontos(int uTTotalPontos) {
+        UTTotalPontos = uTTotalPontos;
     }
+  
 }
-    
-    
-
-

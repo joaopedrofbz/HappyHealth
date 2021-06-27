@@ -17,9 +17,18 @@ import iade.pt.HappyHealth.Models.Repository.ProfessorRepositorio;
     private Logger logger = LoggerFactory.getLogger(ProfessorController.class);
     @Autowired
     private ProfessorRepositorio professorRepositorio;
+    
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Professor> getProfessor() {
         logger.info("Enviando todas os professores");
         return professorRepositorio.findAll();
     }
+
+    @GetMapping(path ="/criaraula", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Professor> InscAula() {
+        logger.info("Enviando todas os professores");
+        return professorRepositorio.Inscreveraula();
+    }
+
+
 }

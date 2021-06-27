@@ -14,18 +14,29 @@ import iade.pt.HappyHealth.Models.Repository.UtilizadorRepositorio;
 
 
 @RestController
-    @RequestMapping(path="/api/utilizador")
+    @RequestMapping(path="/api/utilizadores")
     
     public class UtilizadorController {
     private Logger logger = LoggerFactory.getLogger(UtilizadorController.class);
     @Autowired
-    public UtilizadorRepositorio UtilizadorRepositorio;
-
+    private UtilizadorRepositorio UtilizadorRepositorio;
+        
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Utilizador> getProfessor() {
+    public Iterable<Utilizador> getUtilizadores() {
         logger.info("Enviando todas os utilizadores");
         return UtilizadorRepositorio.findAll();
     }
+    
+    @GetMapping(path ="/Leaderboard", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Utilizador> getUtilizadoresPontos()
+    {
+        logger.info("A carregar a Leadearboard");
+        return UtilizadorRepositorio.EcontraPonSuperior();
 
+    }
+
+    
+
+    
     //ADICIONAR FILTRO DE UT´S POR PONTOS 
 }
