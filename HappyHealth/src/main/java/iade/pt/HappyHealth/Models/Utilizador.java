@@ -21,7 +21,6 @@ public class Utilizador {
     @Column (name ="UT_Apelido") private String UTApelido;
     @Column (name ="UT_Datanasc") private LocalDate UTdatanascimento;
     @Column (name ="UT_Genero") private String UTgenero;
-    @Column (name ="UT_nif") private int UTnif;
     @Column (name="UT_TotalPontos") private int UTTotalPontos;
     
 
@@ -56,12 +55,6 @@ public class Utilizador {
     }
     public void setUTgenero(String uTgenero) {
         UTgenero = uTgenero;
-    }
-    public int getUTnif() {
-        return UTnif;
-    }
-    public void setUTnif(int uTnif) {
-        UTnif = uTnif;
     }
     public int getUTTotalPontos() {
         return UTTotalPontos;

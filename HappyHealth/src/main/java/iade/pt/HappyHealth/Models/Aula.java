@@ -15,62 +15,97 @@ import javax.persistence.Table;
 public class Aula {
     @Id @GeneratedValue
         (strategy = GenerationType.IDENTITY)
-    @Column (name ="Au_id") private int id;
-    @Column (name ="Au_nome") private String Nome;
-    @Column (name ="Au_Tempo") private int Tempo;
-    @Column (name ="Au_Local") private String Local;
-    @Column (name ="Au_Tipo") private String Tipo;
-    @Column (name ="Au_Data") private String Data; 
+    @Column (name ="Au_id") private int auid;
+    @Column (name ="Au_nome") private String auNome;
+    @Column (name ="Au_Tempo") private int auTempo;
+    @Column (name ="Au_Local") private String auLocal;
+    @Column (name ="Au_Tipo") private String auTipo;
+    @Column (name ="Au_Data") private String auData; 
 
     public Aula(){}   // Need empty constructor
     // other constructors getters and setters
 
-    public int getId() {
-        return id;
-    }
+    public int getAuid() {​​​
 
-    public void setId(int id) {
-        this.id = id;
-    }
+        return auid;
 
-    public String getNome() {
-        return Nome;
-    }
+    }​​​
 
-    public void setNome(String nome) {
-        Nome = nome;
-    }
 
-    public int getTempo() {
-        return Tempo;
-    }
+    public void setAuid(int auid) {​​​
 
-    public void setTempo(int tempo) {
-        Tempo = tempo;
-    }
+        this.auid = auid;
 
-    public String  getLocal() {
-        return Local;
-    }
+    }​​​
 
-    public void setLocal(String local) {
-        Local = local;
-    }
-
-    public String getTipo() {
-        return Tipo;
-    }
-
-    public void setTipo(String tipo) {
-        Tipo = tipo;
-    }
-
-    public String getData() {
-        return Data;
-    }
-
-    public void setData(String data) {
-        Data = data;
-    }
     
+
+    public String getAuNome() {​​​
+
+        return auNome;
+
+    }​​​
+
+
+    public void setAuNome(String auNome) {​​​
+
+        this.auNome = auNome;
+
+    }​​​
+
+
+    public int getAuTempo() {​​​
+
+        return auTempo;
+
+    }​​​
+
+
+    public void setAuTempo(int auTempo) {​​​
+
+        this.auTempo = auTempo;
+
+    }​​​
+
+
+    public String getAuLocal() {​​​
+
+        return auLocal;
+
+    }​​​
+
+
+    public void setAuLocal(String auLocal) {​​​
+
+        this.auLocal = auLocal;
+
+    }​​​
+
+
+    public String getAuTipo() {​​​
+
+        return auTipo;
+
+    }​​​
+
+
+    public void setAuTipo(String auTipo) {​​​
+
+        this.auTipo = auTipo;
+
+    }​​​
+
+
+    public String getAuData() {​​​
+
+        return auData;
+
+    }​​​
+
+
+    public void setAuData(String auData) {​​​
+
+        this.auData = auData;
+
+    }​​​
 }
