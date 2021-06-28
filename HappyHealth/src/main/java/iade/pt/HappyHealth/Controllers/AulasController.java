@@ -21,7 +21,16 @@ import iade.pt.HappyHealth.Models.Repository.AulasRepositorio;
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Aula> getAula() {
         logger.info("Enviando todas as aulas");
-        return AulasRepositorio.findAll();
+        return AulasRepositorio.findAll();~
     }
+
+    @GetMapping(path ="/consulta/{​​​auTipo}​​​/", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Aula> Consulaula(@PathVariable String auTipo)                                          
+    {​​​
+
+        logger.info("Consultando as aula de tipo"+auTipo);
+        return AulasRepositorio.Consulaula(auTipo);
+
+    }​​​
 }
 
