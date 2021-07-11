@@ -25,87 +25,53 @@ public class Aula {
     public Aula(){}   // Need empty constructor
     // other constructors getters and setters
 
-    public int getAuid() {​​​
-
+    public int getAuid() {
         return auid;
+    }
 
-    }​​​
-
-
-    public void setAuid(int auid) {​​​
-
+    public void setAuid(int auid) {
         this.auid = auid;
+    }
 
-    }​​​
+    public String getAuNome() {
+        return auNome;
+    }
+
+    public void setAuNome(String auNome) {
+        this.auNome = auNome;
+    }
+
+    public int getAuTempo() {
+        return auTempo;
+    }
+
+    public void setAuTempo(int auTempo) {
+        this.auTempo = auTempo;
+    }
+
+    public String getAuLocal() {
+        return auLocal;
+    }
+
+    public void setAuLocal(String auLocal) {
+        this.auLocal = auLocal;
+    }
+
+    public String getAuTipo() {
+        return auTipo;
+    }
+
+    public void setAuTipo(String auTipo) {
+        this.auTipo = auTipo;
+    }
+
+    public String getAuData() {
+        return auData;
+    }
+
+    public void setAuData(String auData) {
+        this.auData = auData;
+    }
 
     
-
-    public String getAuNome() {​​​
-
-        return auNome;
-
-    }​​​
-
-
-    public void setAuNome(String auNome) {​​​
-
-        this.auNome = auNome;
-
-    }​​​
-
-
-    public int getAuTempo() {​​​
-
-        return auTempo;
-
-    }​​​
-
-
-    public void setAuTempo(int auTempo) {​​​
-
-        this.auTempo = auTempo;
-
-    }​​​
-
-
-    public String getAuLocal() {​​​
-
-        return auLocal;
-
-    }​​​
-
-
-    public void setAuLocal(String auLocal) {​​​
-
-        this.auLocal = auLocal;
-
-    }​​​
-
-
-    public String getAuTipo() {​​​
-
-        return auTipo;
-
-    }​​​
-
-
-    public void setAuTipo(String auTipo) {​​​
-
-        this.auTipo = auTipo;
-
-    }​​​
-
-
-    public String getAuData() {​​​
-
-        return auData;
-
-    }​​​
-
-
-    public void setAuData(String auData) {​​​
-
-        this.auData = auData;
-
-    }​​​
 }

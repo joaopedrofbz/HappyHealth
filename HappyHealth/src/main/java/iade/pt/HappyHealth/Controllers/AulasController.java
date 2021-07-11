@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,16 +22,19 @@ import iade.pt.HappyHealth.Models.Repository.AulasRepositorio;
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Aula> getAula() {
         logger.info("Enviando todas as aulas");
-        return AulasRepositorio.findAll();~
+        return AulasRepositorio.findAll();
     }
 
-    @GetMapping(path ="/consulta/{​​​auTipo}​​​/", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Aula> Consulaula(@PathVariable String auTipo)                                          
-    {​​​
+    @GetMapping(path ="/consulta/{auTipo}/", produces= MediaType.APPLICATION_JSON_VALUE)
 
+    public Iterable<Aula> Consulaula(@PathVariable String auTipo)
+                                               
+    {
         logger.info("Consultando as aula de tipo"+auTipo);
         return AulasRepositorio.Consulaula(auTipo);
+    }
 
-    }​​​
+
+
 }
 
