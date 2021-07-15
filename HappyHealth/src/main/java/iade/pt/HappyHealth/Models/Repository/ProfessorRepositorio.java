@@ -20,7 +20,7 @@ public interface ProfessorRepositorio extends CrudRepository<Professor, Long>{
 
     @Modifying @Transactional
     @Query(value=Inscreveraula ,nativeQuery = true)
-    Iterable<Professor> Inscreveraula(@Param("auNome") String AuNome,@Param("auTempo") int auTempo,@Param("auLocal") String auLocal,@Param("auTipo") String auTipo,
+    int Inscreveraula(@Param("auNome") String AuNome,@Param("auTempo") int auTempo,@Param("auLocal") String auLocal,@Param("auTipo") String auTipo,
                                     @Param("auData") String auData);
 
     Optional<Professor> findById(int id);

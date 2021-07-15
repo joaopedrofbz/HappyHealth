@@ -32,7 +32,7 @@ import javassist.NotFoundException;
     }
 
     @PostMapping(path ="/criaraula/{auNome}/{auTempo}/{auLocal}/{auTipo}/{auData}", produces= MediaType.APPLICATION_JSON_VALUE) 
-        public Iterable<Professor> Inscreveraula(@PathVariable String auNome,@PathVariable int auTempo,@PathVariable String auLocal,
+        public int Inscreveraula(@PathVariable String auNome,@PathVariable int auTempo,@PathVariable String auLocal,
                                                     @PathVariable String auTipo,@PathVariable String auData)
 
         {
