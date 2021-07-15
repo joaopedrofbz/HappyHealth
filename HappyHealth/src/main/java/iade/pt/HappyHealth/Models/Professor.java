@@ -21,6 +21,8 @@ public class Professor {
 
     public Professor(){}
 
+    
+
     public int getId() {
         return id;
     }

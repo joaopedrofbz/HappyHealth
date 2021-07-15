@@ -1,16 +1,20 @@
 package iade.pt.HappyHealth.Controllers;
 
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import iade.pt.HappyHealth.Models.Utilizador;
 import iade.pt.HappyHealth.Models.Repository.UtilizadorRepositorio;
+import javassist.NotFoundException;
 
 
 @RestController
@@ -35,8 +39,12 @@ import iade.pt.HappyHealth.Models.Repository.UtilizadorRepositorio;
 
     }
 
-    
-
-    
-    //ADICIONAR FILTRO DE UT´S POR PONTOS 
+    @GetMapping(path = "/{UTid:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE )
+    public Utilizador getidUtilizador(@PathVariable int UTid) throws NotFoundException {
+        logger.info("A Enviar utilizador "+UTid);
+        Optional<Utilizador> Utilizador=UtilizadorRepositorio.findById(UTid);
+        if (Utilizador.isEmpty()) throw
+            new NotFoundException(""+UTid);
+        else return Utilizador.get() ;
+    }
 }

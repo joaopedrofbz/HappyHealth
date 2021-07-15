@@ -19,22 +19,40 @@ import iade.pt.HappyHealth.Models.Repository.AulasRepositorio;
     private Logger logger = LoggerFactory.getLogger(AulasController.class);
     @Autowired
     private AulasRepositorio AulasRepositorio;
+  
+
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Aula> getAula() {
         logger.info("Enviando todas as aulas");
-        return AulasRepositorio.findAll();
+        return AulasRepositorio.findaulas();
     }
 
-    @GetMapping(path ="/consulta/{auTipo}/", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path ="/Nome/{auNome}", produces= MediaType.APPLICATION_JSON_VALUE)
+
+    public Iterable<Aula> Consulaulanome(@PathVariable String auNome)
+                                               
+    {
+        logger.info("Consultando as aula de tipo"+auNome);
+        return AulasRepositorio.Consulaulanome(auNome);
+    }
+    
+    @GetMapping(path ="/Local/{auLocal}", produces= MediaType.APPLICATION_JSON_VALUE)
+
+    public Iterable<Aula> ConsulaulaLocal(@PathVariable String auLocal)
+                                               
+    {
+        logger.info("Consultando as aula de tipo"+auLocal);
+        return AulasRepositorio.ConsulaulaLocal(auLocal);
+    }
+
+    @GetMapping(path ="/Tipo/{auTipo}", produces= MediaType.APPLICATION_JSON_VALUE)
 
     public Iterable<Aula> Consulaula(@PathVariable String auTipo)
                                                
     {
         logger.info("Consultando as aula de tipo"+auTipo);
-        return AulasRepositorio.Consulaula(auTipo);
+        return AulasRepositorio.ConsulaulaTipo(auTipo);
     }
-
-
 
 }
 

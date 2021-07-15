@@ -12,6 +12,8 @@ public interface UtilizadorRepositorio extends CrudRepository<Utilizador,Integer
 
     @Query(value=EcontraPonSuperior,nativeQuery = true)
     Iterable<Utilizador> EcontraPonSuperior();
+
+    
     
                             
     
